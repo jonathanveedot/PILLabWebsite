@@ -22,7 +22,7 @@ High-Level Requirements
 
 Tutorials (lynda.pitt.edu):
 
-MVC tutorial:
+MVC tutorial
 * Learning the Model-View-Controller Design Pattern in iOS (Just ignore the iOS-specificity and focus on the concepts)
 
 Interface tutorial
