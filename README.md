@@ -38,9 +38,11 @@ Downloads:
 I recommend downloading PhpStorm IDE:
 https://www.jetbrains.com/student/
 
-The web portal will actually run on a LAMP stack, but downloading the following in order to run your web project locally. 
+The web portal will actually run on a LAMP stack, but download the following in order to run your web project locally. 
+
 If you have Windows, it's a WAMP stack:
 https://sourceforge.net/projects/wampserver/
+
 If you have macOS, it's a MAMP stack:
 https://sourceforge.net/projects/mamp/
 
