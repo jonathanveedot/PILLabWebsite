@@ -1,0 +1,28 @@
+img.team
+{
+    display: block;
+    margin: 0 auto;
+}
+
+#mission
+{
+    padding: 0;
+}
+
+.team-name
+{
+    font-size: 22px;
+    text-align: center;
+}
+
+.team-pos
+{
+    font-size: 18px;
+    text-align: center;
+}
+
+img.team
+{
+    width: 192px;
+    height: 192px;
+}

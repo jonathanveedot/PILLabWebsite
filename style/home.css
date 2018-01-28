@@ -1,0 +1,63 @@
+/* CONTENT STYLE */
+
+#who-we-are-1
+{
+    color: #EF4136;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+#what-we-do-1
+{
+    color: #F7941D;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+#ltl img
+{
+    display: block; 
+    width: 50%; 
+    height: auto; 
+    margin: 0 auto;
+}
+
+#ltl h1
+{
+    text-align: center;
+}
+
+#get-involved
+{
+    font-size: 40px;
+    font-family: Montserrat, sans-serif;
+}
+
+#check-out-calendar
+{
+    font-size: 40px;
+    font-family: Montserrat, sans-serif;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width:1294px)
+{
+    
+}
+
+@media screen and (min-width:768px)
+{
+    
+}
+
+@media screen and (min-width:670px)
+{
+    
+}

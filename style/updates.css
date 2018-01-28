@@ -1,0 +1,39 @@
+.login
+{
+    width: 85%;
+    margin: 0 auto;
+}
+
+#login-form
+{
+    width: 260px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+#login-form input
+{
+    margin: 0 0 5px 0;
+}
+
+input[type=submit]#login-button
+{
+    background-color: #2B90C8;
+    color: white;
+    padding: 10px 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]#login-button:hover
+{
+    background: #7C0D68;
+}
+
+span.forgot-password
+{
+    font-size: 14px;
+    float: right;
+}

@@ -1,0 +1,24 @@
+img.content
+{
+    padding: 40px 0px 0px 0px;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+}
+
+h3
+{
+    text-align: left;
+    padding: 0px;
+}
+
+#calendar-embed 
+{
+    max-width: 100%;
+    height: 450px;
+    display: block;
+    margin: auto;
+    overflow: auto;
+    float: both;
+}

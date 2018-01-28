@@ -1,0 +1,371 @@
+/* NAVIGATION MENU STYLE */
+
+/* 
+The markup for the navigation menu uses nested unordered lists contained by div#navimenu. 
+The menu depends on navigation.js, a jquery script that controls the responsiveness of 
+the navigation menu according to four option parameters: 
+1) title (text of the button that toggles the menu on mobile devices);  
+2) breakpoint (screen width at which menu will switch to mobile mode - default value = 768);
+3) format (type of menu displayed on mobile devices - dropdown, multitoggle, or select);
+4) sticky (boolean defining if the menu display should be fixed on scroll).
+*/
+
+/* Import any custom font */
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700); 
+
+/* Stylesheet reset targeting all elements used by navimenu to prevent CSS conflicts */
+#navimenu, #navimenu ul, #navimenu ul li, #navimenu ul li a, #navimenu #menu-button { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    list-style: none; 
+    line-height: 1; 
+    display: block; 
+    position: relative; 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+/* Clearfix */
+#navimenu:after, #navimenu > ul:after { 
+    content: "."; 
+    display: block; 
+    clear: both; 
+    visibility: hidden; 
+    line-height: 0; 
+    height: 0; 
+}
+
+/* Hide menu-button toggle if breakpoint is not exceeded */
+#navimenu #menu-button { 
+    display: none; 
+}
+
+/* Menu font and background color */
+#navimenu { 
+    font-family: Montserrat, sans-serif; 
+    background: #2B90C8; 
+}
+
+/* Float left so that menu items appear in-line*/
+#navimenu > ul > li { 
+    float: left; 
+}
+
+/* style padding, typography and transitions of main links */
+#navimenu > ul > li > a { 
+    padding: 17px; 
+    font-size: 12px; 
+    letter-spacing: 1px; 
+    text-decoration: none; 
+    color: #ffffff; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    -webkit-transition: color .5s ease; 
+    -moz-transition: color .5s ease; 
+    transition: color .5s ease; 
+}
+
+/* Change link background-color on hover */
+#navimenu > ul > li:hover > a { 
+    background-color: #7C0D68; 
+}
+
+/* Links with submenus need extra space to the right for submenu indicator */ 
+/* List items containing those links have class .has-sub, which is added by the jQuery script */
+#navimenu > ul > li.has-sub > a { 
+    padding-right: 30px; 
+}
+
+/* Submenu indicator "+" symbol */
+/* On hover, submenu will be displayed and indicator will become a horizontal line, "-" */
+
+/* Horizontal line is created first with an after pseudoelement */
+#navimenu ul > li.has-sub > a:after { 
+    position: absolute; 
+    top: 22px; 
+    right: 11px; 
+    width: 8px; 
+    height: 2px; 
+    display: block; 
+    background: #ffffff; 
+    content: ''; 
+    -webkit-transition: background .5s ease; 
+    -moz-transition: background .5s ease; 
+    transition: background .5s ease; 
+}
+
+/* Line can change color on hover, like menu links */
+#navimenu > ul > li.has-sub:hover > a:after, 
+#navimenu > ul > li.has-sub > a:hover:after 
+{ 
+    background: #ffffff; 
+}
+
+/* Vertical line added using before pseudoelement */
+#navimenu ul > li.has-sub > a:before { 
+    position: absolute; 
+    top: 19px; 
+    right: 14px; 
+    display: block; 
+    width: 2px; 
+    height: 8px; 
+    background: #ffffff; 
+    content: ''; 
+    -webkit-transition: all .5s ease; 
+    -moz-transition: all .5s ease; 
+    -ms-transition: all .5s ease; 
+    -o-transition: all .5s ease; 
+    transition: all .5s ease; 
+}
+
+/* Vertical line disappears on hover */
+#navimenu ul > li.has-sub:hover > a:before, 
+#navimenu ul > li.has-sub > a:hover:before { 
+    top: 23px; height: 0; 
+}
+
+/* Submenus hidden by default */
+#navimenu ul ul { 
+    position: absolute; 
+    left: -9999px; 
+}
+
+/* Submenus displayed on hover */
+#navimenu li:hover > ul { 
+    left: auto; 
+}
+
+/* Any second level submenu will display to the right of its parent */
+#navimenu ul ul ul { 
+    margin-left: 100%; 
+    top: 0; 
+}
+
+/* Submenu expanding effect on hover */
+/* Set height to 0 and use CSS transitions to display at normal height */
+#navimenu ul ul li { 
+    height: 0; 
+    -webkit-transition: height .5s ease; 
+    -moz-transition: height .5s ease; 
+    transition: height .5s ease; 
+} 
+#navimenu li:hover > ul > li { 
+    height: 35px; 
+}
+
+/* Submenu link style */
+#navimenu ul ul li a { 
+    width: 170px; 
+    padding: 11px 15px; 
+    border-bottom: 1px solid rgba(150, 150, 150, 0.15); 
+    font-size: 12px; 
+    text-decoration: none; 
+    color: #ffffff; 
+    font-weight: 400; 
+    background: #7C0D68; 
+}
+
+/* Remove botton-border of last link on each submenu */
+#navimenu ul ul li:last-child > a, 
+#navimenu ul ul li.last-item > a { 
+    border-bottom: 0; 
+} 
+
+/* Submenu links change background color on hover */
+#navimenu ul ul li:hover > a, 
+#navimenu ul ul li a:hover { 
+    color: #ffffff;
+    background: #EF4136; 
+}
+
+/* Style of any second level submenu indicators */
+#navimenu ul ul li.has-sub > a:after { 
+    top: 16px; 
+    right: 11px; 
+    background: #ffffff; 
+} 
+#navimenu ul ul > li.has-sub:hover > a:after, 
+#navimenu ul ul > li.has-sub > a:hover:after { 
+    background: #ffffff; 
+} 
+#navimenu ul ul li.has-sub > a:before { 
+    top: 13px; 
+    right: 14px; 
+    background: #ffffff; 
+} 
+#navimenu ul ul > li.has-sub:hover > a:before { 
+    top: 17px; 
+    height: 0; 
+}
+
+/* NAVIGATION MENU FOR MOBILE */
+
+/* Make entire menu fluid by giving all items 100% width */
+/* Remove floats to switch to a vertical menu */
+/* Remove hover displaying and effects */
+#navimenu.small-screen { 
+    width: 100%; 
+} 
+#navimenu.small-screen ul { 
+    width: 100%; display: none; 
+} 
+#navimenu.small-screen ul li { 
+    width: 100%; 
+    border-top: 1px solid rgba(120, 120, 120, 0.2); 
+} 
+#navimenu.small-screen ul ul li, 
+#navimenu.small-screen li:hover > ul > li { 
+    height: auto; 
+} 
+#navimenu.small-screen ul li a, 
+#navimenu.small-screen ul ul li a { 
+    width: 100%; 
+    border-bottom: 0; 
+} 
+#navimenu.small-screen > ul > li { 
+    float: none; 
+} 
+#navimenu.small-screen ul ul, 
+#navimenu.small-screen ul ul ul { 
+    position: relative; 
+    left: 0; 
+    width: 100%; 
+    margin: 0; 
+    text-align: left; 
+}
+
+/* Add indentation for submenu links and hide submenu indicators */
+#navimenu.small-screen ul ul li a { 
+    padding-left: 25px; 
+} 
+#navimenu.small-screen ul ul ul li a { 
+    padding-left: 35px; 
+} 
+#navimenu.small-screen > ul > li.has-sub > a:after, 
+#navimenu.small-screen > ul > li.has-sub > a:before, 
+#navimenu.small-screen ul ul > li.has-sub > a:after, 
+#navimenu.small-screen ul ul > li.has-sub > a:before { 
+    display: none; 
+}
+
+/* Menu-button style */
+#navimenu.small-screen #menu-button { 
+    display: block; 
+    padding: 17px; 
+    color: #ffffff; 
+    cursor: pointer; 
+    font-size: 12px; 
+    text-transform: uppercase; 
+    font-weight: 700; 
+}
+
+/* "Hamburger" menu icon styled using two pseudoelements */
+/* After pseudoelement displays two horizontal lines of the icon using borders */
+#navimenu.small-screen #menu-button:after { 
+    position: absolute; 
+    top: 22px; 
+    right: 17px; 
+    display: block; 
+    height: 4px; 
+    width: 20px; 
+    border-top: 2px solid #ffffff; 
+    border-bottom: 2px solid #ffffff; 
+    content: ''; 
+} 
+/* Before pseudoelement displays the third horizontal line */
+#navimenu.small-screen #menu-button:before { 
+    position: absolute; 
+    top: 16px; 
+    right: 17px; 
+    display: block; 
+    height: 2px; 
+    width: 20px; 
+    background: #ffffff; 
+    content: ''; 
+}
+
+/* When menu is opened, menu-button gets class .menu-opened, and menu icon changed into an 'x' symbol */
+#navimenu.small-screen #menu-button.menu-opened:after { 
+    top: 23px; 
+    border: 0; 
+    height: 2px; 
+    width: 15px; 
+    background: #ffffff; 
+    -webkit-transform: rotate(45deg); 
+    -moz-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    -o-transform: rotate(45deg); 
+    transform: rotate(45deg); 
+} 
+#navimenu.small-screen #menu-button.menu-opened:before { 
+    top: 23px; 
+    background: #ffffff; 
+    width: 15px; 
+    -webkit-transform: rotate(-45deg); 
+    -moz-transform: rotate(-45deg); 
+    -ms-transform: rotate(-45deg); 
+    -o-transform: rotate(-45deg); 
+    transform: rotate(-45deg); 
+}
+
+/* Script adds a span element with class .submenu-button for each submenu */
+/* These allow the submenu to be displayed/hidden when they are clicked */
+/* These are displayed on the right side of each parent link */ 
+/* If parent link is already a submenu link and has second level submenu, submenu button will be smaller */
+#navimenu.small-screen .submenu-button { 
+    position: absolute; 
+    z-index: 99; 
+    right: 0; 
+    top: 0; 
+    display: block; 
+    border-left: 1px solid rgba(120, 120, 120, 0.2); 
+    height: 46px; 
+    width: 46px; 
+    cursor: pointer; 
+} 
+#navimenu.small-screen ul ul .submenu-button { 
+    height: 34px; 
+    width: 34px; 
+}
+
+/* Change the background color of the span when submenu is opened */
+#navimenu.small-screen .submenu-button.submenu-opened { background: #7C0D68; }
+
+/* Add submenu indicators to submenu-buttons */
+#navimenu.small-screen .submenu-button:after { 
+    position: absolute; 
+    top: 22px; 
+    right: 19px; 
+    width: 8px; 
+    height: 2px; 
+    display: block; 
+    background: #ffffff; 
+    content: ''; 
+} 
+#navimenu.small-screen ul ul .submenu-button:after { 
+    top: 15px; 
+    right: 13px; 
+} 
+#navimenu.small-screen .submenu-button.submenu-opened:after { 
+    background: #ffffff; 
+} 
+#navimenu.small-screen .submenu-button:before { 
+    position: absolute; 
+    top: 19px; 
+    right: 22px; 
+    display: block; 
+    width: 2px; 
+    height: 8px; 
+    background: #ffffff; 
+    content: ''; 
+} 
+#navimenu.small-screen ul ul .submenu-button:before { 
+    top: 12px; 
+    right: 16px; 
+} 
+#navimenu.small-screen .submenu-button.submenu-opened:before { 
+    display: none; 
+}
+

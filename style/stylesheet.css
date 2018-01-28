@@ -1,0 +1,298 @@
+/*
+PILLab Color Palette:
+Red: #EF4136
+Orange:#F7941D
+Yellow: #FFDE17
+Green: #8BC243
+Blue: #2B90C8
+Violet: #7C0D68
+Gray: #57575C
+*/
+
+*
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#wrap
+{
+    min-height: 100%;
+    position: relative;
+}
+
+#header-wrap
+{
+    padding: 10px;
+}
+
+#logo
+{
+    background: #FFFFFF;
+    padding: 0;
+    width: auto;
+    height: 40px;
+    margin: 0 0 10px 20px;
+}
+
+#apply-pittpharm 
+{
+    background: #FFFFFF;
+    padding: 0;
+    width: auto;
+    height: 40px;
+    margin: 0 0 10px 20px;
+    float: right;
+}
+
+#body-wrap
+{
+    /* Height of the footer is 1200px and must be accounted for */
+    padding: 10px 10px 1200px;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    background: #FFFFFF;
+    overflow: auto;
+}
+
+.banner img
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    overflow: auto;
+    float: left;
+}
+
+.body-div
+{
+    float: left;
+    margin: 0;
+    min-width: 100%;
+    max-width: 100%;
+    height: 200px;
+    vertical-align: middle;
+    display: table;
+}
+
+.body-div-wide
+{
+    float: left;
+    margin: 0;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#footer-wrap
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 1200px;   /* Height of the footer */
+    text-align: center;
+    vertical-align: top;
+
+    background: #2B90C8; /* For browsers that do not support gradients */ 
+    background: -webkit-linear-gradient(#38BCFF, #164B63); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#38BCFF, #164B63); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#38BCFF, #164B63); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#38BCFF, #164B63); /* Standard syntax */
+}
+
+#footer-wrap:after
+{
+    content: '';
+    width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+    display: inline-block;
+}
+
+.footer-div
+{
+    /*float: left;*/
+    margin: 10px 10px 10px 10px;
+    width:  300px;
+    height: 280px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#contact-info
+{
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: left;
+}
+
+#terms
+{
+    position: absolute; 
+    bottom: 0; 
+    text-align: center; 
+    font-size: 10px; 
+    color: #FFFFFF;
+}
+
+#terms a
+{
+    text-decoration: none;
+    color: #FFDE17;
+}
+
+#terms a:hover
+{
+    font-weight: bold;
+}
+
+#ad-wrap-a
+{
+    vertical-align: top;
+}
+
+#ad-wrap-a p, #ad-wrap-b p
+{
+    color: #FFFFFF;
+    font-size: 28px;
+    text-align: left;
+    margin-left: 25px;
+}
+
+#ad-wrap-a a, #ad-wrap-b a
+{
+    text-decoration: none;
+    color: #FFDE17;
+    font-size: 36px;
+}
+
+#ad-wrap-a a:hover, #ad-wrap-b a:hover
+{
+    font-weight: bold;
+}
+
+/* use this style if adding image into ad-wrap */
+#ad-wrap-b img
+{
+    display: block; 
+    width: 40%; 
+    height: auto; 
+    margin: 0 auto;
+}
+
+h1
+{
+    color: #7C0D68;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    clear: both;
+}
+
+h2
+{
+    color: #EF4136;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: 60px 10px 10px 10px;
+    clear: both;
+}
+
+h3
+{
+    color: #F7941D;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+}
+
+p
+{
+    color: #57575C;
+    font-size: 18px;
+}
+
+p.smaller-text
+{
+    font-size: 16px;
+}
+
+a
+{
+    text-decoration: none;
+    color: #2B90C8;
+}
+
+a:hover
+{
+    font-weight: bold;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width:1294px)
+{
+    #body-wrap
+    {
+        padding-bottom: 300px;
+    }
+    
+    #footer-wrap
+    {
+        max-height: 300px;
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width:768px)
+{
+    .body-div
+    {
+        min-width: 50%;
+        max-width: 50%;
+        height: auto;
+    }
+    
+    p
+    {
+        font-size: 22px;
+    }
+    
+    p.smaller-text
+    {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:670px)
+{
+    #body-wrap
+    {
+        padding-bottom: 600px;
+        width: 90%;
+        max-width: 900px;
+    }
+    
+    #footer-wrap
+    {
+        max-height: 600px;
+    }
+    
+    .footer-div
+    {
+        max-width: 320px;
+    }
+}

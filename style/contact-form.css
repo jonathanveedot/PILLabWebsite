@@ -1,0 +1,36 @@
+::-webkit-input-placeholder 
+{
+    text-align: center;
+}
+
+:-moz-placeholder 
+{ 
+    /* Firefox 18- */
+    text-align: center;
+}
+
+::-moz-placeholder 
+{ 
+    /* Firefox 19+ */
+    text-align: center;
+}
+
+:-ms-input-placeholder 
+{  
+    text-align: center;
+}
+
+#contact-form 
+{
+    color: #57575C;
+    font-size: 18px;
+}
+
+@media screen and (min-width:670px)
+{
+    #contact-form
+    {
+        width: 80%;
+        padding-left: 20%;
+    }
+}
