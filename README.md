@@ -7,17 +7,17 @@ The PILLab is seeking to transform their current website (www.pillab.tech) into 
 
 High-Level Requirements
 
-• Design an interface in the administrative dashboard for editing “home” page slideshow content, as well as “events” page slideshow content
-• Design an interface for adding, removing, and editing team member content
-• Design an interface for adding, removing, and editing project content
-• Design an “events” page that contains an events calendar, and a slideshow bar of event photos for each of various events
-• Design a “blog” page that dynamically generates content by parsing the HTML of a Tmblr blog to display the title, date, description, and link of blog articles
-	o The most recent blog post should also appear on “home” page
-	o Add twitter feed to the top of this page
-• Design an interface for producing administrative updates for associate users who are affiliated with lab projects
-	o Associate users should be notified via auto-generated email
-• Implement a log-in system and use session management to track user roles
-• Construct a MySQL database and implement controllers for getting and posting data
+* Design an interface in the administrative dashboard for editing “home” page slideshow content, as well as “events” page slideshow content
+* Design an interface for adding, removing, and editing team member content
+* Design an interface for adding, removing, and editing project content
+* Design an “events” page that contains an events calendar, and a slideshow bar of event photos for each of various events
+* Design a “blog” page that dynamically generates content by parsing the HTML of a Tmblr blog to display the title, date, description, and link of blog articles
+	* The most recent blog post should also appear on “home” page
+	* Add twitter feed to the top of this page
+* Design an interface for producing administrative updates for associate users who are affiliated with lab projects
+	* Associate users should be notified via auto-generated email
+* Implement a log-in system and use session management to track user roles
+* Construct a MySQL database and implement controllers for getting and posting data
 
 
 Tutorials (lynda.pitt.edu):
